@@ -2,11 +2,19 @@ import { APIGatewayProxyEvent, APIGatewayProxyResult } from "aws-lambda";
 import Busboy from "busboy";
 import { Readable } from "stream";
 import { ocrService } from "../domain/ocr-service";
+import { authMiddleware } from "../infra";
 
 export const handler = async (
   event: APIGatewayProxyEvent
 ): Promise<APIGatewayProxyResult> => {
   try {
+    if (!authMiddleware(event)) {
+      return {
+        statusCode: 401,
+        body: JSON.stringify({ error: "Token inválido ou não fornecido" }),
+      };
+    }
+
     const contentType =
       event.headers["content-type"] || event.headers["Content-Type"] || "";
 

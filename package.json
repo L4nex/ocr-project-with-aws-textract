@@ -6,6 +6,7 @@
   "devDependencies": {
     "@serverless/typescript": "^4.14.1",
     "@types/aws-lambda": "^8.10.149",
+    "@types/jsonwebtoken": "^9.0.9",
     "@types/node": "^22.15.17",
     "serverless": "^4.14.3",
     "serverless-offline": "^14.4.0",
@@ -15,6 +16,7 @@
   "dependencies": {
     "@aws-sdk/client-textract": "^3.806.0",
     "@types/busboy": "^1.5.4",
-    "busboy": "^1.6.0"
+    "busboy": "^1.6.0",
+    "jsonwebtoken": "^9.0.2"
   }
 }

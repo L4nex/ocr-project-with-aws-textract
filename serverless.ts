@@ -44,6 +44,9 @@ const serverlessConfiguration: AWS = {
           },
         },
       ],
+      environment: {
+        JWT_SECRET: "${env:JWT_SECRET}",
+      },
     },
   },
 
