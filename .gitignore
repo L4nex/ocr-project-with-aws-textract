@@ -1,0 +1,46 @@
+# Dependências
+node_modules/
+jspm_packages/
+.npm
+.yarn-integrity
+
+# Ambiente e configurações
+.env
+.env.*
+!.env.example
+.aws/
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Serverless
+.serverless/
+.serverless_plugins/
+
+# Build e compilação
+dist/
+.husky/
+.eslintcache
+*.js.map
+*.d.ts
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Testes
+coverage/
+.nyc_output/
+
+# TypeScript
+*.tsbuildinfo
+
+# Arquivos temporários
+tmp/
+temp/
